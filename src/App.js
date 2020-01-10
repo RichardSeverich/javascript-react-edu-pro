@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Content from './components/content/Content';
 
 class App extends Component {
-  static propTypes = {
+   static propTypes = {
     children: PropTypes.object.isRequired
   };
   render() {
