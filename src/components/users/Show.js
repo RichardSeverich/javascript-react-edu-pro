@@ -3,7 +3,7 @@ import { users } from './../../mock-data/users.json';
 import NavigationBar from './../nav-bar/NavigationBar';
 import './Show.css';
 
-class Show extends Component{
+class Show extends Component {
 
     constructor(){
         super();
@@ -43,7 +43,7 @@ class Show extends Component{
                     <td scope="col">
                         <button onClick={this.delete.bind(this, _id)} className="ui basic button">
                             <i class="remove sign icon"></i>
-                            Remove
+                            Delete
                         </button>
                     </td>
                 </tr>
@@ -53,7 +53,7 @@ class Show extends Component{
             <div>
                 <NavigationBar></NavigationBar>
                 <div align="center">
-                    <div className="card card-users">
+                    <div className="card-users">
                         <div className="margin-bottom">
                             <h3 align="center">
                                 Users

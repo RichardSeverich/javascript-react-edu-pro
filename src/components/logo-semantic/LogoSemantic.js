@@ -5,7 +5,7 @@ import './Logo.css';
 class LogoSemantic extends Component {
     render() {
         return (
-            <img src={logo} className="App-logo-bar" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
         )
     }
 }

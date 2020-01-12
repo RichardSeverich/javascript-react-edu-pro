@@ -3,43 +3,44 @@ import Logo from './../logo/Logo';
 import './NavigationBar.css';
 import logo from './logo.png';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class NavigationBar extends Component {
     constructor(props) {
         super(props);
         this.navigateUsersShow = this.navigateUsersShow.bind(this);
         this.navigateUsersCreate = this.navigateUsersCreate.bind(this);
-        this.navigateCursosMostrar = this.navigateCursosMostrar.bind(this);
-        this.navigateCursosCrear = this.navigateCursosCrear.bind(this);
-        this.navigateModulosMostrar = this.navigateModulosMostrar.bind(this);
-        this.navigateModulosCrear = this.navigateModulosCrear.bind(this);
+        this.navigateCoursesShow = this.navigateCoursesShow.bind(this);
+        this.navigateCoursesCreate = this.navigateCoursesCreate.bind(this);
+        this.navigateModulesShow = this.navigateModulesShow.bind(this);
+        this.navigateModulesCreate = this.navigateModulesCreate.bind(this);
         this.navigateLogin = this.navigateLogin.bind(this);
-        this.navigateNotasCrear = this.navigateNotasCrear.bind(this);
-        this.navigateNotasMostrar = this.navigateNotasMostrar.bind(this);
+        this.navigateScoresCreate = this.navigateScoresCreate.bind(this);
+        this.navigateScoresShow = this.navigateScoresShow.bind(this);
     }
-    navigateUsersShow() {
+     navigateUsersShow() {
         this.props.history.push('/users-show');
     }
     navigateUsersCreate() {
         this.props.history.push('/users-create');
     }
-    navigateCursosMostrar() {
-        this.props.history.push('/courses-mostrar');
+    navigateCoursesShow() {
+        this.props.history.push('/courses-show');
     }
-    navigateCursosCrear() {
-        this.props.history.push('/courses-crear');
+    navigateCoursesCreate() {
+        this.props.history.push('/courses-create');
     }
-    navigateModulosMostrar() {
-        this.props.history.push('/modules-mostrar');
+    navigateModulesShow() {
+        this.props.history.push('/modules-show');
     }
-    navigateNotasCrear() {
-        this.props.history.push('/scores-crear');
+    navigateModulesCreate() {
+        this.props.history.push('/modules-create');
     }
-    navigateNotasMostrar() {
-        this.props.history.push('/scores-mostrar');
+    navigateScoresShow() {
+        this.props.history.push('/scores-show');
     }
-    navigateModulosCrear() {
-        this.props.history.push('/modules-crear');
+    navigateScoresCreate() {
+        this.props.history.push('/scores-create');
     }
     navigateLogin(){
         this.props.history.push('/login');
@@ -55,7 +56,7 @@ class NavigationBar extends Component {
                 <div className="item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                            <i class="user icon"></i>
+                            <i className="user icon"></i>
                             Users
                             <i className="dropdown icon"></i>
                             <div className="menu">
@@ -68,12 +69,12 @@ class NavigationBar extends Component {
                 <div className="item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                            <i class="book icon"></i>
+                            <i className="book icon"></i>
                             Courses
                             <i className="dropdown icon"></i>
                             <div className="menu">
-                                <div onClick={this.navigateCursosCrear} className="item">Add</div>
-                                <div onClick={this.navigateCursosMostrar} className="item">Show</div>
+                                <div onClick={this.navigateCoursesCreate} className="item">Add</div>
+                                <div onClick={this.navigateCoursesShow} className="item">Show</div>
                             </div>
                         </div>
                     </div>
@@ -81,12 +82,12 @@ class NavigationBar extends Component {
                 <div className="item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                            <i class="pencil icon"></i>
+                            <i className="pencil icon"></i>
                             Modules
                             <i className="dropdown icon"></i>
                             <div className="menu">
-                                <div onClick={this.navigateModulosCrear} className="item">Add</div>
-                                <div onClick={this.navigateModulosMostrar} className="item">Show</div>
+                                <div onClick={this.navigateModulesCreate} className="item">Add</div>
+                                <div onClick={this.navigateModulesShow} className="item">Show</div>
                             </div>
                         </div>
                     </div>
@@ -94,12 +95,12 @@ class NavigationBar extends Component {
                 <div className="item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                          <i class="lightning icon"></i>
+                          <i className="lightning icon"></i>
                             Scores
                             <i className="dropdown icon"></i>
                             <div className="menu">
-                                <div onClick={this.navigateNotasCrear} className="item">Add</div>
-                                <div onClick={this.navigateNotasMostrar} className="item">Show</div>
+                                <div onClick={this.navigateScoresCreate} className="item">Add</div>
+                                <div onClick={this.navigateScoresShow} className="item">Show</div>
                             </div>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ class NavigationBar extends Component {
                 <div className="right item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                            <i class="setting icon"></i>
+                            <i className="setting icon"></i>
                             <div className="menu">
                                 <div className="item">Conf</div>
                                 <div onClick={this.navigateLogin} className="item">Exit</div>
