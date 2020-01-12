@@ -34,7 +34,7 @@ class Login extends Component{
                                         <input type="password" name="pass" placeholder="Password"></input>
                                     </div>
                                 </div>
-                                <button onClick={this.navigateNavbar} className="ui positive labeled icon button" type="submit">
+                                <button onClick={this.navigateNavbar} className="ui basic button labeled icon button" type="submit">
                                     <i className="unlock alternate icon"></i>
                                     Login
                                 </button>

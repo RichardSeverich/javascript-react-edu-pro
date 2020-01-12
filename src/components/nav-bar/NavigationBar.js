@@ -105,6 +105,21 @@ class NavigationBar extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="item">
+                    <div className="ui compact menu">
+                        <div className="ui simple dropdown item">
+                            <i class="lightbulb icon"></i>
+                            Examples
+                            <i className="dropdown icon"></i>
+                            <div className="menu">
+                                <div className="item">Counter</div>
+                                <div className="item">Counter Redux</div>
+                                <div className="item">Counter Hooks</div>
+                                <div className="item">CounterHooks Redux</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="right item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
