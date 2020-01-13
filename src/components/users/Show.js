@@ -38,7 +38,7 @@ class Show extends Component {
                         <button className="ui basic button">
                             <i class="edit icon"></i>
                             Edit
-                        </button> 
+                        </button>
                     </td>
                     <td scope="col">
                         <button onClick={this.delete.bind(this, _id)} className="ui basic button">
