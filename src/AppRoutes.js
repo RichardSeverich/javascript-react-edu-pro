@@ -15,6 +15,7 @@ import ModulesCreate from './components/modules/Create';
 import ScoresShow from './components/scores/Show';
 import ScoresCreate from './components/scores/Create';
 import Counter from './components/counter/Counter';
+import CounterRedux from './components/counter-redux/CounterRedux';
 
 const AppRoutes = () =>
     <App>
@@ -30,6 +31,7 @@ const AppRoutes = () =>
             <Route exact path="/nav-bar" component={NavigationBar}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/counter" component={Counter}/>
+            <Route exact path="/counter-redux" component={CounterRedux}/>
             <Route exact path="/" component={Login}/>
             <Route component={Login}/>
         </Switch>

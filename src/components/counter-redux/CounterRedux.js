@@ -34,7 +34,7 @@ class Counter extends Component {
                 <div className="six wide column">
                     <div className="ui fluid card">
                         <div className="margin-bottom-one"></div>
-                            <h3 align="center">Counter: {this.state.count}</h3>
+                            <h3 align="center">Counter Redux: {this.state.count}</h3>
                         <div className="margin-bottom-one"></div>
                         <div className="content" align="center">
                             <form className="ui form">
