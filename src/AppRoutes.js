@@ -15,7 +15,7 @@ import ModulesCreate from './components/modules/Create';
 import ScoresShow from './components/scores/Show';
 import ScoresCreate from './components/scores/Create';
 import Counter from './components/counter/Counter';
-import CounterRedux from './components/counter-redux/CounterRedux';
+import CounterRedux from './components/counter-redux/CounterContainer';
 
 const AppRoutes = () =>
     <App>

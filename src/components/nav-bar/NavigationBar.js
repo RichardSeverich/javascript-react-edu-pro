@@ -116,7 +116,7 @@ class NavigationBar extends Component {
                 <div className="item">
                     <div className="ui compact menu">
                         <div className="ui simple dropdown item">
-                            <i class="lightbulb icon"></i>
+                            <i className="lightbulb icon"></i>
                             Examples
                             <i className="dropdown icon"></i>
                             <div className="menu">

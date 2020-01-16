@@ -36,13 +36,13 @@ class Show extends Component {
                     <td scope="col">{user.type}</td>
                     <td scope="col"> 
                         <button className="ui basic button">
-                            <i class="edit icon"></i>
+                            <i className="edit icon"></i>
                             Edit
                         </button>
                     </td>
                     <td scope="col">
                         <button onClick={this.delete.bind(this, _id)} className="ui basic button">
-                            <i class="remove sign icon"></i>
+                            <i className="remove sign icon"></i>
                             Delete
                         </button>
                     </td>
