@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Logo from './../logo/Logo';
-import './NavigationBar.css';
 import logo from './logo.png';
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import './NavigationBar.css';
 
 class NavigationBar extends Component {
     constructor(props) {

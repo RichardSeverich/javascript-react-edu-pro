@@ -15,7 +15,7 @@ class Show extends Component {
     delete(_id) {
         this.setState({
             users: this.state.users.filter((element, index) => {
-                return element._id != _id;
+                return element._id !== _id;
             })
         })
         alert("deleted successfully");

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Logo from './../logo/Logo';
 import LogoSemantic from './../logo-semantic/LogoSemantic';
 import './Login.css';
 

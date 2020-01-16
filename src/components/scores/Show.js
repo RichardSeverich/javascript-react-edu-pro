@@ -22,13 +22,13 @@ class Show extends Component{
                     <td scope="col">{score.value}</td>
                     <td scope="col"> 
                         <button className="ui basic button">
-                            <i class="edit icon"></i>
+                            <i className="edit icon"></i>
                             Edit
                         </button>
                     </td>
                     <td scope="col"> 
                         <button className="ui basic button">
-                            <i class="remove sign icon"></i>
+                            <i className="remove sign icon"></i>
                             Delete
                         </button> 
                     </td>

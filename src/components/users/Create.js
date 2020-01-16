@@ -26,7 +26,7 @@ class Create extends Component{
                             </div>
                             <div className="field">
                                 <div className='label'><label>Nickname</label></div>
-                                <input suggested="my_nickname" className="" minLength="3" maxLength="10" readonly></input>
+                                <input suggested="my_nickname" className="" minLength="3" maxLength="10" readOnly></input>
                             </div>
                             <div className="field">
                                 <div className='label'><label>Password</label></div>

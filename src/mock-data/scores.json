@@ -64,7 +64,7 @@
 			"value": "60"
         },
 		        {
-            "_id": "5de09bfdc3c68622c07f7881",
+            "_id": "5de09bfdc3c68622c07f7888",
 			"id_user": "6090101",
             "user_name": "Jhon",
 			"user_last_name": "Snow",
@@ -73,7 +73,7 @@
 			"value": "85"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7882",
+            "_id": "5de09bfdc3c68622c07f7889",
 			"id_user": "6090105",
             "user_name": "Arya",
 			"user_last_name": "Stark",
@@ -82,7 +82,7 @@
 			"value": "60"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7883",
+            "_id": "5de09bfdc3c68622c07f7890",
 			"id_user": "6090106",
             "user_name": "Sansa",
 			"user_last_name": "Stark",
@@ -91,7 +91,7 @@
 			"value": "75"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7884",
+            "_id": "5de09bfdc3c68622c07f7891",
 			"id_user": "6090107",
             "user_name": "Khal",
 			"user_last_name": "Drogo",
@@ -100,7 +100,7 @@
 			"value": "80"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7885",
+            "_id": "5de09bfdc3c68622c07f7892",
 			"id_user": "6090108",
             "user_name": "Robert",
 			"user_last_name": "Baratheon",
@@ -109,7 +109,7 @@
 			"value": "85"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7886",
+            "_id": "5de09bfdc3c68622c07f7893",
 			"id_user": "6090109",
             "user_name": "Night",
 			"user_last_name": "King",
@@ -118,7 +118,7 @@
 			"value": "80"
         },
         {
-            "_id": "5de09bfdc3c68622c07f7887",
+            "_id": "5de09bfdc3c68622c07f7894",
 			"id_user": "6090110",
             "user_name": "Daenerys",
 			"user_last_name": "Targaryen",
