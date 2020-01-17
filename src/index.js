@@ -11,8 +11,11 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 import reducer from './redux/reducers/CounterReducer'
 
+const initialState = 0;
+
 const store = createStore (
     reducer,
+    initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
  )
 
