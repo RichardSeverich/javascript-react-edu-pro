@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import "./App.css";
+import PropTypes from "prop-types";
 
 //Components
-import Content from './components/content/Content';
+import Content from "./components/content/Content";
 
 class App extends Component {
-   static propTypes = {
+  static propTypes = {
     children: PropTypes.object.isRequired
   };
   render() {
-    const { children } = this.props;    
+    const { children } = this.props;
     return (
       <div className="App">
-          <Content body={children}></Content>
+        <Content body={children}></Content>
       </div>
     );
   }
