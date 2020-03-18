@@ -8,7 +8,7 @@ import {
 
 const mapStateToProps = state => {
   return {
-    counter: state
+    counter: state.counter
   };
 };
 const mapDispatchToProps = dispatch => {

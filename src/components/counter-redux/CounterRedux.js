@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import NavigationBar from "./../nav-bar/NavigationBar";
 
 class Counter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 0
-    };
+  constructor(props) {
+    super(props);
   }
   render() {
     const { counter, increment, decrement, reset } = this.props;

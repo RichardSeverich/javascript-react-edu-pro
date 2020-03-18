@@ -6,24 +6,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./AppRoutes";
 
-// Redux
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import reducer from "./redux/reducers/CounterReducer";
-
-const initialState = 0;
-
-const store = createStore(
-  reducer,
-  initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
 ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <AppRoutes />
-    </Router>
-  </Provider>,
+  <Router>
+    <AppRoutes />
+  </Router>,
   document.getElementById("root")
 );

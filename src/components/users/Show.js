@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import { users } from "./../../mock-data/users.json";
 import NavigationBar from "./../nav-bar/NavigationBar";
 import "./Show.css";
 
 class Show extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    const { users } = this.props;
+    console.log(users);
     this.state = {
       users
     };
     this.delete = this.delete.bind(this);
   }
+
   delete(_id) {
     this.setState({
       users: this.state.users.filter((element, index) => {

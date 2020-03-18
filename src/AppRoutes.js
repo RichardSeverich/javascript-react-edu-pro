@@ -4,9 +4,9 @@ import { Route, Switch } from "react-router-dom";
 
 // Components
 import App from "./App";
-import Login from "./components/login/Login";
+import Login from "./components/login/LoginContainer";
 import NavigationBar from "./components/nav-bar/NavigationBar";
-import UsersShow from "./components/users/Show";
+import UsersShow from "./components/users/ShowContainer";
 import UsersCreate from "./components/users/Create";
 import CoursesShow from "./components/courses/Show";
 import CoursesCreate from "./components/courses/Create";
