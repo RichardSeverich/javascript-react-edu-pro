@@ -4,9 +4,11 @@ import {
   increment,
   decrement,
   reset
-} from "../../redux/actions/CounterActions";
+} from "../../redux/actions/ActionsCounter";
 
 const mapStateToProps = state => {
+  console.log("aaaaaa");
+  console.log(state);
   return {
     counter: state.counter
   };

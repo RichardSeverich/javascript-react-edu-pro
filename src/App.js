@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 import PropTypes from "prop-types";
 // Redux
-import { createStore } from "redux";
-import reducer from "./redux/reducers/CounterReducer";
+import { createStore, combineReducers } from "redux";
+import reducerCounter from "./redux/reducers/ReducerCounter";
+import reducerUser from "./redux/reducers/ReducerUser";
+
 import "./App.css";
 
 // Components
@@ -14,17 +16,18 @@ import { users } from "./mock-data/users.json";
 import { courses } from "./mock-data/courses.json";
 import { modules } from "./mock-data/modules.json";
 
-const counter = 0;
+let rootReducer = combineReducers({
+  users: reducerUser,
+  counter: reducerCounter
+});
 
 const initialState = {
-  users,
-  courses,
-  modules,
-  counter
+  users: users,
+  counter: 0
 };
 
 const store = createStore(
-  reducer,
+  rootReducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
