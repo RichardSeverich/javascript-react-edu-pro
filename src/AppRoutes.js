@@ -7,7 +7,7 @@ import App from "./App";
 import Login from "./components/login/LoginContainer";
 import NavigationBar from "./components/nav-bar/NavigationBar";
 import UsersShow from "./components/users/ShowContainer";
-import UsersCreate from "./components/users/Create";
+import UsersCreate from "./components/users/CretateContainer";
 import CoursesShow from "./components/courses/Show";
 import CoursesCreate from "./components/courses/Create";
 import ModulesShow from "./components/modules/Show";
