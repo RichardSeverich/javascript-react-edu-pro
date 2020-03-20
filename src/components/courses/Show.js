@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import { courses } from "./../../mock-data/courses.json";
 import NavigationBar from "./../nav-bar/NavigationBar";
 import "./Show.css";
 
 class Show extends Component {
-  constructor() {
-    super();
-    this.state = {
-      courses
-    };
+  constructor(props) {
+    super(props);
   }
   render() {
-    const rows = this.state.courses.map((course, i) => {
+    const { courses, remove } = this.props;
+    const rows = courses.map((course, i) => {
+      let _id = course._id;
       return (
         <tr key={course._id}>
           <td scope="col">
@@ -29,7 +27,7 @@ class Show extends Component {
             </button>
           </td>
           <td scope="col">
-            <button className="ui basic button">
+            <button onClick={() => remove(_id)} className="ui basic button">
               <i className="remove sign icon"></i>
               Delete
             </button>

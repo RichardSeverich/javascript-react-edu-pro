@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { createStore, combineReducers } from "redux";
 import reducerCounter from "./redux/reducers/ReducerCounter";
 import reducerUser from "./redux/reducers/ReducerUser";
+import reducerCourse from "./redux/reducers/ReducerCourse";
 
 import "./App.css";
 
@@ -18,11 +19,13 @@ import { modules } from "./mock-data/modules.json";
 
 let rootReducer = combineReducers({
   users: reducerUser,
+  courses: reducerCourse,
   counter: reducerCounter
 });
 
 const initialState = {
   users: users,
+  courses: courses,
   counter: 0
 };
 

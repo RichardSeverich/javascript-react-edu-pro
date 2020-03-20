@@ -143,8 +143,6 @@ class NavigationBar extends Component {
                     <div onClick={this.navigateCounterRedux} className="item">
                       Counter Redux
                     </div>
-                    <div className="item">Counter Hooks</div>
-                    <div className="item">CounterHooks Redux</div>
                   </div>
                 </div>
               </div>
