@@ -99,6 +99,19 @@ class NavigationBar extends Component {
             <div className="item">
               <div className="ui compact menu">
                 <div className="ui simple dropdown item">
+                  <i className="graduation cap icon"></i>
+                  Inscriptions
+                  <i className="dropdown icon"></i>
+                  <div className="menu">
+                    <div className="item">Add</div>
+                    <div className="item">Show</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="item">
+              <div className="ui compact menu">
+                <div className="ui simple dropdown item">
                   <i className="pencil icon"></i>
                   Modules
                   <i className="dropdown icon"></i>
