@@ -5,24 +5,11 @@ import "./Show.css";
 class Show extends Component {
   constructor(props) {
     super(props);
-    const { users } = this.props;
-    console.log(users);
-    this.state = {
-      users
-    };
-    this.delete = this.delete.bind(this);
   }
 
-  delete(_id) {
-    this.setState({
-      users: this.state.users.filter((element, index) => {
-        return element._id !== _id;
-      })
-    });
-    alert("deleted successfully");
-  }
   render() {
-    const rows = this.state.users.map((user, i) => {
+    const { users, remove } = this.props;
+    const rows = users.map((user, i) => {
       let _id = user._id;
       return (
         <tr key={user._id}>
@@ -44,10 +31,7 @@ class Show extends Component {
             </button>
           </td>
           <td scope="col">
-            <button
-              onClick={this.delete.bind(this, _id)}
-              className="ui basic button"
-            >
+            <button onClick={() => remove(_id)} className="ui basic button">
               <i className="remove sign icon"></i>
               Delete
             </button>

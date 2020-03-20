@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import Show from "./Show";
+import { remove } from "../../redux/actions/ActionsUser";
 
 const mapStateToProps = state => {
   return {
@@ -7,4 +8,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Show);
+const mapDispatchToProps = dispatch => {
+  return {
+    remove: id => dispatch(remove(id))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Show);
