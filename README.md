@@ -16,3 +16,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Deploy: npm start
 4. Deploy will start with mock data.
 5. Default credentials are: User: admin, Password: admin123
+
+## Documentation
+
+### Diagram-architecture
+
+![Screenshot](documentation/javascript-react-edu-architecture.jpg)
+
+### Diagram-entity-relation
+
+![Screenshot](documentation/javascript-react-edu-entity-relation.jpg)
+
+### Redux Work Flow
+
+![Screenshot](documentation/javascript-react-edu-redux-work-flow.jpg)
+
+### Component
+
+![Screenshot](documentation/javascript-react-edu-componentjpg)
