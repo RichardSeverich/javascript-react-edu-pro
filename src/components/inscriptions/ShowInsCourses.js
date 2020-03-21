@@ -43,7 +43,8 @@ class ShowInsCourses extends Component {
         <div align="center">
           <div className="card-courses">
             <div className="margin-bottom">
-              <h3 align="center">Select Courses</h3>
+              <h3 align="center">Inscriptions</h3>
+              <h4 align="center">Select Course</h4>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
