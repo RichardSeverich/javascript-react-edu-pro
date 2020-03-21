@@ -25,8 +25,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Diagram-entity-relation
 
+<p align="center">
 ![Screenshot](documentation/javascript-react-edu-entity-relation.jpg)
-
+</p
 ### Redux Work Flow
 
 ![Screenshot](documentation/javascript-react-edu-redux-work-flow.jpg)
@@ -59,8 +60,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Module Form
 
-![Screenshot](documentation/ui-module-form.jpg)
+![Screenshot](documentation/ui-modules-form.jpg)
 
 ### Module Table
 
-![Screenshot](documentation/ui-module-table.jpg)
+![Screenshot](documentation/ui-modules-table.jpg)
