@@ -24,8 +24,10 @@ class ShowIns extends Component {
       let user = users.find(
         elementUser => elementUser._id === elementCourseUser.user_id
       );
-      user.CourseUserId = elementCourseUser._id;
-      usersSpecific.push(user);
+      if (user) {
+        user.CourseUserId = elementCourseUser._id;
+        usersSpecific.push(user);
+      }
     });
     const rows = usersSpecific.map((user, i) => {
       let _id = user.CourseUserId;
