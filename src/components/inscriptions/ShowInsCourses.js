@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavigationBar from "./../nav-bar/NavigationBar";
-import "./Show.css";
+import "./../courses/Show.css";
 
 class ShowInsCourses extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class ShowInsCourses extends Component {
       <div>
         <NavigationBar></NavigationBar>
         <div align="center">
-          <div className="card-ins">
+          <div className="card-courses">
             <div className="margin-bottom">
               <h3 align="center">Select Courses</h3>
             </div>

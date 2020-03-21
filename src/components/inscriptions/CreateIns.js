@@ -5,32 +5,49 @@ import "./../users/Show.css";
 class ShowIns extends Component {
   constructor(props) {
     super(props);
-    this.delete = this.delete.bind(this);
+    this.state = {
+      arrayUsers: []
+    };
+    this.register = this.register.bind(this);
   }
 
-  delete(id, remove, coursesUsers) {
-    remove(id);
-    alert("deleted successfully");
+  register(coursesUsers, user_id, course_id, add) {
+    let last = coursesUsers[coursesUsers.length - 1];
+    let id = (parseInt(last._id, 10) + 1).toString();
+    let newInscription = {
+      _id: id,
+      course_id: course_id,
+      user_id: user_id
+    };
+    add(newInscription);
+    this.setState(() => {
+      return { arrayUsers: [] };
+    });
+    alert("inscription successfully");
   }
 
   render() {
-    const { users, coursesUsers, remove } = this.props;
+    const { users, coursesUsers, add } = this.props;
     const course = this.props.location.course;
-    let coursesUsersSpecific = coursesUsers.filter((element, index) => {
-      return course._id === element.course_id;
-    });
-    let usersSpecific = [];
-    coursesUsersSpecific.forEach(function(elementCourseUser, index) {
-      let user = users.find(
-        elementUser => elementUser._id === elementCourseUser.user_id
-      );
-      if (user) {
-        user.CourseUserId = elementCourseUser._id;
-        usersSpecific.push(user);
+    let course_id = course._id;
+    for (var i = 0; i < users.length; i += 1) {
+      let band = true;
+      let user = users[i];
+      for (var j = 0; j < coursesUsers.length; j += 1) {
+        let inscription = coursesUsers[j];
+        let courseExist = course_id === inscription.course_id;
+        let userExist = user._id === inscription.user_id;
+        if (courseExist && userExist) {
+          band = false;
+          break;
+        }
       }
-    });
-    const rows = usersSpecific.map((user, i) => {
-      let _id = user.CourseUserId;
+      if (band) {
+        this.state.arrayUsers.push(user);
+      }
+    }
+    const rows = this.state.arrayUsers.map((user, i) => {
+      let user_id = user._id;
       return (
         <tr key={user._id}>
           <td scope="col">
@@ -46,11 +63,17 @@ class ShowIns extends Component {
           <td scope="col">{user.type}</td>
           <td scope="col">
             <button
-              onClick={this.delete.bind(this, _id, remove)}
+              onClick={this.register.bind(
+                this,
+                coursesUsers,
+                user_id,
+                course_id,
+                add
+              )}
               className="ui basic button"
             >
-              <i className="remove sign icon"></i>
-              Delete
+              <i className="save icon"></i>
+              Register
             </button>
           </td>
         </tr>
@@ -63,7 +86,7 @@ class ShowIns extends Component {
           <div className="card-users">
             <div className="margin-bottom">
               <h3 align="center">{course.name}</h3>
-              <h4 align="center">Registered Users</h4>
+              <h4 align="center">Inscriptions</h4>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">

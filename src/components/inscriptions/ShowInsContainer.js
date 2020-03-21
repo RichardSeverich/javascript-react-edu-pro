@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ShowIns from "./ShowIns";
-import { remove } from "../../redux/actions/ActionsUser";
+import { remove } from "../../redux/actions/ActionsCourseUser";
 
 const mapStateToProps = state => {
   return {

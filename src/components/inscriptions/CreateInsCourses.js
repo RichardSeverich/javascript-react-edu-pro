@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import NavigationBar from "./../nav-bar/NavigationBar";
-import "./Show.css";
+import "./../courses/Show.css";
 
-class Show extends Component {
+class CreateInsCourses extends Component {
   constructor(props) {
     super(props);
     this.navigate = this.navigate.bind(this);
@@ -10,15 +10,14 @@ class Show extends Component {
 
   navigate(course) {
     this.props.history.push({
-      pathname: "/inscriptions-show",
+      pathname: "/inscriptions-create",
       course: course
     });
   }
 
   render() {
-    const { courses, remove } = this.props;
+    const { courses } = this.props;
     const rows = courses.map((course, i) => {
-      let _id = course._id;
       return (
         <tr key={course._id}>
           <td scope="col">
@@ -35,18 +34,6 @@ class Show extends Component {
               Details
             </button>
           </td>
-          <td scope="col">
-            <button className="ui basic button">
-              <i className="edit icon"></i>
-              Edit
-            </button>
-          </td>
-          <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
-              <i className="remove sign icon"></i>
-              Delete
-            </button>
-          </td>
         </tr>
       );
     });
@@ -56,7 +43,7 @@ class Show extends Component {
         <div align="center">
           <div className="card-courses">
             <div className="margin-bottom">
-              <h3 align="center">Courses</h3>
+              <h3 align="center">Select Course</h3>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
@@ -65,8 +52,6 @@ class Show extends Component {
                     <th scope="col"></th>
                     <th scope="col">_id</th>
                     <th scope="col">Name</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -79,4 +64,4 @@ class Show extends Component {
     );
   }
 }
-export default Show;
+export default CreateInsCourses;

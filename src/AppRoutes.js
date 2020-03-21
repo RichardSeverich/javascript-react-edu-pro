@@ -18,10 +18,14 @@ import Counter from "./components/counter/Counter";
 import CounterRedux from "./components/counter-redux/CounterContainer";
 import ShowInsCourses from "./components/inscriptions/ShowInsCoursesContainer";
 import ShowInsContainer from "./components/inscriptions/ShowInsContainer";
+import CreateInsCourses from "./components/inscriptions/CreateInsCoursesContainer";
+import CreateInsContainer from "./components/inscriptions/CreateInsContainer";
 
 const AppRoutes = () => (
   <App>
     <Switch>
+      <Route exact path="/inscriptions-createn" component={CreateInsCourses} />
+      <Route exact path="/inscriptions-create" component={CreateInsContainer} />
       <Route exact path="/inscriptions-shown" component={ShowInsCourses} />
       <Route exact path="/inscriptions-show" component={ShowInsContainer} />
       <Route exact path="/scores-create" component={ScoresCreate} />
