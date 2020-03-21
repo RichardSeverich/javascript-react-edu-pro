@@ -25,16 +25,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Diagram-entity-relation
 
-<p align="center">
-![Screenshot](documentation/javascript-react-edu-entity-relation.jpg)
-</p
+<img align="center" src="documentation/javascript-react-edu-entity-relation.jpg">
+
 ### Redux Work Flow
 
 ![Screenshot](documentation/javascript-react-edu-redux-work-flow.jpg)
 
 ### Component
 
-![Screenshot](documentation/javascript-react-edu-component.jpg)
+<img align="center" src="documentation/javascript-react-edu-component.jpg">
 
 ## Screens
 
