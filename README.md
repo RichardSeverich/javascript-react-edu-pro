@@ -31,7 +31,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Redux Work Flow
 
-![Screenshot](documentation/javascript-react-edu-redux-work-flow.jpg)
+<p align="center">
+  <img src="documentation/javascript-react-edu-redux-work-flow.jpg">
+</p>
 
 ### Component
 
