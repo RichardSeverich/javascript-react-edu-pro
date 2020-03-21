@@ -33,4 +33,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Component
 
-![Screenshot](documentation/javascript-react-edu-componentjpg)
+![Screenshot](documentation/javascript-react-edu-component.jpg)
