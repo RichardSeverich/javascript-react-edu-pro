@@ -25,7 +25,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Diagram-entity-relation
 
-<img align="center" src="documentation/javascript-react-edu-entity-relation.jpg">
+<p align="center">
+  <img src="documentation/javascript-react-edu-entity-relation.jpg">
+</p>
 
 ### Redux Work Flow
 
@@ -33,17 +35,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Component
 
-<img align="center" src="documentation/javascript-react-edu-component.jpg">
+<p align="center">
+  <img src="documentation/javascript-react-edu-component.jpg">
+</p>
 
 ## Screens
 
 ### Login
 
-![Screenshot](documentation/ui-loguin.jpg)
+<p align="center">
+  <img src="documentation/ui-loguin.jpg">
+</p>
 
 ### Users Form
 
-![Screenshot](documentation/ui-users-form.jpg)
+<p align="center">
+  <img src="documentation/ui-users-form.jpg">
+</p>
 
 ### Users Table
 
@@ -51,7 +59,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Courses Form
 
-![Screenshot](documentation/ui-courses-form.jpg)
+<p align="center">
+  <img src="documentation/ui-courses-form.jpg">
+</p>
 
 ### Courses Table
 
@@ -59,7 +69,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Module Form
 
-![Screenshot](documentation/ui-modules-form.jpg)
+<p align="center">
+  <img src="documentation/ui-modules-form.jpg">
+</p>
 
 ### Module Table
 
