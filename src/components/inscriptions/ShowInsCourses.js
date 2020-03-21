@@ -2,34 +2,36 @@ import React, { Component } from "react";
 import NavigationBar from "./../nav-bar/NavigationBar";
 import "./Show.css";
 
-class Show extends Component {
+class ShowInsCourses extends Component {
   constructor(props) {
     super(props);
+    this.navigate = this.navigate.bind(this);
   }
+
+  navigate(course) {
+    this.props.history.push({
+      pathname: "/inscriptions-show",
+      course: course
+    });
+  }
+
   render() {
-    const { modules, remove } = this.props;
-    const rows = modules.map((module, i) => {
-      let _id = module._id;
+    const { courses } = this.props;
+    const rows = courses.map((course, i) => {
       return (
-        <tr key={module._id}>
+        <tr key={course._id}>
           <td scope="col">
             <input type="checkbox"></input>
           </td>
-          <td scope="col">{module._id}</td>
-          <td scope="col">{module.name}</td>
+          <td scope="col">{course._id}</td>
+          <td scope="col">{course.name}</td>
           <td scope="col">
-            <button className="ui basic button">Details</button>
-          </td>
-          <td scope="col">
-            <button className="ui basic button">
-              <i className="edit icon"></i>
-              Edit
-            </button>
-          </td>
-          <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
-              <i className="remove sign icon"></i>
-              Delete
+            <button
+              onClick={this.navigate.bind(this, course)}
+              className="ui basic button"
+            >
+              <i className="search plus icon"></i>
+              Details
             </button>
           </td>
         </tr>
@@ -39,9 +41,9 @@ class Show extends Component {
       <div>
         <NavigationBar></NavigationBar>
         <div align="center">
-          <div className="card-modules">
+          <div className="card-ins">
             <div className="margin-bottom">
-              <h3 align="center">Modules</h3>
+              <h3 align="center">Select Courses</h3>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
@@ -49,9 +51,7 @@ class Show extends Component {
                   <tr>
                     <th scope="col"></th>
                     <th scope="col">_id</th>
-                    <th scope="col">name</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Name</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -64,4 +64,4 @@ class Show extends Component {
     );
   }
 }
-export default Show;
+export default ShowInsCourses;

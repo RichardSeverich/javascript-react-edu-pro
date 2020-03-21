@@ -10,16 +10,20 @@ import UsersShow from "./components/users/ShowContainer";
 import UsersCreate from "./components/users/CretateContainer";
 import CoursesShow from "./components/courses/ShowContainer";
 import CoursesCreate from "./components/courses/CreateContainer";
-import ModulesShow from "./components/modules/Show";
-import ModulesCreate from "./components/modules/Create";
+import ModulesShow from "./components/modules/ShowContainer";
+import ModulesCreate from "./components/modules/CreateContainer";
 import ScoresShow from "./components/scores/Show";
 import ScoresCreate from "./components/scores/Create";
 import Counter from "./components/counter/Counter";
 import CounterRedux from "./components/counter-redux/CounterContainer";
+import ShowInsCourses from "./components/inscriptions/ShowInsCoursesContainer";
+import ShowInsContainer from "./components/inscriptions/ShowInsContainer";
 
 const AppRoutes = () => (
   <App>
     <Switch>
+      <Route exact path="/inscriptions-shown" component={ShowInsCourses} />
+      <Route exact path="/inscriptions-show" component={ShowInsContainer} />
       <Route exact path="/scores-create" component={ScoresCreate} />
       <Route exact path="/scores-show" component={ScoresShow} />
       <Route exact path="/modules-create" component={ModulesCreate} />

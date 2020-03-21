@@ -1,31 +1,39 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import PropTypes from "prop-types";
-// Redux
-import { createStore, combineReducers } from "redux";
-import reducerCounter from "./redux/reducers/ReducerCounter";
-import reducerUser from "./redux/reducers/ReducerUser";
-import reducerCourse from "./redux/reducers/ReducerCourse";
 
 import "./App.css";
 
 // Components
 import Content from "./components/content/Content";
 
+// Redux
+import { createStore, combineReducers } from "redux";
+import reducerCounter from "./redux/reducers/ReducerCounter";
+import reducerUser from "./redux/reducers/ReducerUser";
+import reducerCourse from "./redux/reducers/ReducerCourse";
+import reducerModule from "./redux/reducers/ReducerModule";
+import reducerCourseUser from "./redux/reducers/ReducerCourseUser";
+
 // Mock data
 import { users } from "./mock-data/users.json";
 import { courses } from "./mock-data/courses.json";
 import { modules } from "./mock-data/modules.json";
+import { coursesUsers } from "./mock-data/courses-users.json";
 
 let rootReducer = combineReducers({
   users: reducerUser,
   courses: reducerCourse,
+  modules: reducerModule,
+  coursesUsers: reducerCourseUser,
   counter: reducerCounter
 });
 
 const initialState = {
   users: users,
   courses: courses,
+  modules: modules,
+  coursesUsers: coursesUsers,
   counter: 0
 };
 

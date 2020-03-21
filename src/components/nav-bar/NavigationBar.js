@@ -18,7 +18,9 @@ class NavigationBar extends Component {
     this.navigateScoresShow = this.navigateScoresShow.bind(this);
     this.navigateCounter = this.navigateCounter.bind(this);
     this.navigateCounterRedux = this.navigateCounterRedux.bind(this);
+    this.navigateInscriptionsShow = this.navigateInscriptionsShow.bind(this);
   }
+
   navigateUsersShow() {
     this.props.history.push("/users-show");
   }
@@ -36,6 +38,9 @@ class NavigationBar extends Component {
   }
   navigateModulesCreate() {
     this.props.history.push("/modules-create");
+  }
+  navigateInscriptionsShow() {
+    this.props.history.push("/inscriptions-shown");
   }
   navigateScoresShow() {
     this.props.history.push("/scores-show");
@@ -104,7 +109,12 @@ class NavigationBar extends Component {
                   <i className="dropdown icon"></i>
                   <div className="menu">
                     <div className="item">Add</div>
-                    <div className="item">Show</div>
+                    <div
+                      onClick={this.navigateInscriptionsShow}
+                      className="item"
+                    >
+                      Show
+                    </div>
                   </div>
                 </div>
               </div>

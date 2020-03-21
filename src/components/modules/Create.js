@@ -1,12 +1,34 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import NavigationBar from "./../nav-bar/NavigationBar";
 import "./Create.css";
 
 class Create extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.create = this.create.bind(this);
   }
+
+  create(add) {
+    // Find the text field via the React ref
+    let name = ReactDOM.findDOMNode(this.refs.name).value.trim();
+    let id =
+      "_" +
+      Math.random()
+        .toString(36)
+        .substr(2, 9);
+    let module = {
+      _id: id,
+      name: name
+    };
+    add(module);
+    alert("created successfully");
+    //Clear Inputs
+    ReactDOM.findDOMNode(this.refs.name).value = "";
+  }
+
   render() {
+    const { add } = this.props;
     return (
       <div>
         <NavigationBar></NavigationBar>
@@ -21,6 +43,7 @@ class Create extends Component {
                   <div className="field">
                     <label>Name</label>
                     <input
+                      ref="name"
                       type="text"
                       className="form-control"
                       minLength="3"
@@ -28,7 +51,11 @@ class Create extends Component {
                     ></input>
                   </div>
                   <div className="text-center">
-                    <button type="button" className="ui basic button">
+                    <button
+                      onClick={this.create.bind(this, add)}
+                      type="button"
+                      className="ui basic button"
+                    >
                       <i className="save icon"></i>Add
                     </button>
                     <button type="button" className="ui basic button">
