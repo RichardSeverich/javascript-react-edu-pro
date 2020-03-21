@@ -1,6 +1,8 @@
 # javascript-react-edu-se
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+1. This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+2. This project is using redux (4.0.5).
+3. This project is using react redux (7.1.3)
 
 ## Prerequisites
 
