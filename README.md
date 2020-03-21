@@ -48,3 +48,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Users Table
 
 ![Screenshot](documentation/ui-users-table.jpg)
+
+### Courses Form
+
+![Screenshot](documentation/ui-courses-form.jpg)
+
+### Courses Table
+
+![Screenshot](documentation/ui-courses-table.jpg)
+
+### Module Form
+
+![Screenshot](documentation/ui-module-form.jpg)
+
+### Module Table
+
+![Screenshot](documentation/ui-module-table.jpg)
