@@ -20,10 +20,18 @@ import ShowInsCourses from "./components/inscriptions/ShowInsCoursesContainer";
 import ShowInsContainer from "./components/inscriptions/ShowInsContainer";
 import CreateInsCourses from "./components/inscriptions/CreateInsCoursesContainer";
 import CreateInsContainer from "./components/inscriptions/CreateInsContainer";
+import ShowPlanCourses from "./components/plans/ShowPlanCoursesContainer";
+import ShowPlanContainer from "./components/plans/ShowPlanContainer";
+import CreatePlanCourses from "./components/plans/CreatePlanCoursesContainer";
+import CreatePlanContainer from "./components/plans/CreatePlanContainer";
 
 const AppRoutes = () => (
   <App>
     <Switch>
+      <Route exact path="/plans-createn" component={CreatePlanCourses} />
+      <Route exact path="/plans-create" component={CreatePlanContainer} />
+      <Route exact path="/plans-shown" component={ShowPlanCourses} />
+      <Route exact path="/plans-show" component={ShowPlanContainer} />
       <Route exact path="/inscriptions-createn" component={CreateInsCourses} />
       <Route exact path="/inscriptions-create" component={CreateInsContainer} />
       <Route exact path="/inscriptions-shown" component={ShowInsCourses} />

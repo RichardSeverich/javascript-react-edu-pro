@@ -1,5 +1,5 @@
 let initialState = {};
-const reducerModule = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   // state is array of modules
   switch (action.type) {
     case "ADD_MODULE":
@@ -11,4 +11,4 @@ const reducerModule = (state = initialState, action) => {
       return state;
   }
 };
-export default reducerModule;
+export default reducer;

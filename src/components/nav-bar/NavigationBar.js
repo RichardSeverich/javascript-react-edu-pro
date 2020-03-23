@@ -22,6 +22,8 @@ class NavigationBar extends Component {
     this.navigateInscriptionsCreate = this.navigateInscriptionsCreate.bind(
       this
     );
+    this.navigatePlansShow = this.navigatePlansShow.bind(this);
+    this.navigatePlansCreate = this.navigatePlansCreate.bind(this);
   }
 
   navigateUsersShow() {
@@ -48,6 +50,14 @@ class NavigationBar extends Component {
 
   navigateInscriptionsCreate() {
     this.props.history.push("/inscriptions-createn");
+  }
+
+  navigatePlansShow() {
+    this.props.history.push("/plans-shown");
+  }
+
+  navigatePlansCreate() {
+    this.props.history.push("/plans-createn");
   }
 
   navigateScoresShow() {
@@ -144,6 +154,23 @@ class NavigationBar extends Component {
                       Add
                     </div>
                     <div onClick={this.navigateModulesShow} className="item">
+                      Show
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="item">
+              <div className="ui compact menu">
+                <div className="ui simple dropdown item">
+                  <i className="bookmark icon"></i>
+                  Plans
+                  <i className="dropdown icon"></i>
+                  <div className="menu">
+                    <div onClick={this.navigatePlansCreate} className="item">
+                      Add
+                    </div>
+                    <div onClick={this.navigatePlansShow} className="item">
                       Show
                     </div>
                   </div>

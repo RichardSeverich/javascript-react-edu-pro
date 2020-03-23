@@ -1,5 +1,5 @@
 let initialState = {};
-const reducerUser = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   // state is array of courseUser
   switch (action.type) {
     case "ADD_COURSE_USER":
@@ -11,4 +11,4 @@ const reducerUser = (state = initialState, action) => {
       return state;
   }
 };
-export default reducerUser;
+export default reducer;

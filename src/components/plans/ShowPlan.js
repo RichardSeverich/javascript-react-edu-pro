@@ -1,15 +1,34 @@
 import React, { Component } from "react";
 import NavigationBar from "./../nav-bar/NavigationBar";
-import "./Show.css";
+import "./../modules/Show.css";
 
-class Show extends Component {
+class ShowPlan extends Component {
   constructor(props) {
     super(props);
+    this.delete = this.delete.bind(this);
   }
+
+  delete(id, remove) {
+    remove(id);
+    alert("deleted successfully");
+  }
+
   render() {
-    const { modules, remove } = this.props;
-    const rows = modules.map((module, i) => {
-      let _id = module._id;
+    const { modules, coursesModules, remove } = this.props;
+    const course = this.props.location.course;
+    let coursesModulesSpecific = coursesModules.filter((element, index) => {
+      return course._id === element.course_id;
+    });
+    let modulesSpecific = [];
+    coursesModulesSpecific.forEach(function(elementCourseModule, index) {
+      let module = modules.find(
+        elementModule => elementModule._id === elementCourseModule.module_id
+      );
+      module.CourseModuleId = elementCourseModule._id;
+      modulesSpecific.push(module);
+    });
+    const rows = modulesSpecific.map((module, i) => {
+      let _id = module.CourseModuleId;
       return (
         <tr key={module._id}>
           <td scope="col">
@@ -18,19 +37,10 @@ class Show extends Component {
           <td scope="col">{module._id}</td>
           <td scope="col">{module.name}</td>
           <td scope="col">
-            <button className="ui basic button">
-              <i className="search plus icon"></i>
-              Details
-            </button>
-          </td>
-          <td scope="col">
-            <button className="ui basic button">
-              <i className="edit icon"></i>
-              Edit
-            </button>
-          </td>
-          <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
+            <button
+              onClick={this.delete.bind(this, _id, remove)}
+              className="ui basic button"
+            >
               <i className="remove sign icon"></i>
               Delete
             </button>
@@ -44,7 +54,8 @@ class Show extends Component {
         <div align="center">
           <div className="card-modules">
             <div className="margin-bottom">
-              <h3 align="center">Modules</h3>
+              <h3 align="center">{course.name}</h3>
+              <h4 align="center">Registered Modules</h4>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
@@ -53,8 +64,6 @@ class Show extends Component {
                     <th scope="col"></th>
                     <th scope="col">_id</th>
                     <th scope="col">name</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -67,4 +76,4 @@ class Show extends Component {
     );
   }
 }
-export default Show;
+export default ShowPlan;
