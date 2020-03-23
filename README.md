@@ -81,3 +81,11 @@
 ### Module Table
 
 ![Screenshot](documentation/ui-modules-table.jpg)
+
+### Inscriptions Table - by course
+
+![Screenshot](documentation/ui-inscriptions-table.jpg)
+
+### Scores Table - by module
+
+![Screenshot](documentation/ui-scores-table.jpg)
