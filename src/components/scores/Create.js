@@ -10,8 +10,6 @@ class Create extends Component {
   }
 
   add(scores, data, add) {
-    console.log(scores);
-    console.log(data);
     let last = scores[scores.length - 1];
     let id = (parseInt(last._id, 10) + 1).toString();
     let value = ReactDOM.findDOMNode(this.refs.score).value.trim();
