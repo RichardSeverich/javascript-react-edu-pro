@@ -5,9 +5,23 @@ import "./Show.css";
 class Show extends Component {
   constructor(props) {
     super(props);
+    this.delete = this.delete.bind(this);
   }
+
+  delete(_id, plans, remove) {
+    let coursesModules = plans.filter((element, index) => {
+      return element.module_id === _id;
+    });
+    if (coursesModules.length === 0) {
+      remove(_id);
+      alert("deleted successfully");
+    } else {
+      alert("module has relations");
+    }
+  }
+
   render() {
-    const { modules, remove } = this.props;
+    const { modules, plans, remove } = this.props;
     const rows = modules.map((module, i) => {
       let _id = module._id;
       return (
@@ -30,7 +44,10 @@ class Show extends Component {
             </button>
           </td>
           <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
+            <button
+              onClick={this.delete.bind(this, _id, plans, remove)}
+              className="ui basic button"
+            >
               <i className="remove sign icon"></i>
               Delete
             </button>

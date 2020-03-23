@@ -5,10 +5,23 @@ import "./Show.css";
 class Show extends Component {
   constructor(props) {
     super(props);
+    this.delete = this.delete.bind(this);
+  }
+
+  delete(id, inscriptions, remove) {
+    let coursesUsers = inscriptions.filter((element, index) => {
+      return element.user_id === id;
+    });
+    if (coursesUsers.length === 0) {
+      remove(id);
+      alert("deleted successfully");
+    } else {
+      alert("user has relations");
+    }
   }
 
   render() {
-    const { users, remove } = this.props;
+    const { users, inscriptions, remove } = this.props;
     const rows = users.map((user, i) => {
       let _id = user._id;
       return (
@@ -31,7 +44,10 @@ class Show extends Component {
             </button>
           </td>
           <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
+            <button
+              onClick={this.delete.bind(this, _id, inscriptions, remove)}
+              className="ui basic button"
+            >
               <i className="remove sign icon"></i>
               Delete
             </button>

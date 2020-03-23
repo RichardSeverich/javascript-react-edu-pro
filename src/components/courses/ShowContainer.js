@@ -4,7 +4,9 @@ import { remove } from "../../redux/actions/ActionsCourse";
 
 const mapStateToProps = state => {
   return {
-    courses: state.courses
+    courses: state.courses,
+    inscriptions: state.coursesUsers,
+    plans: state.coursesModules
   };
 };
 

@@ -6,6 +6,7 @@ class Show extends Component {
   constructor(props) {
     super(props);
     this.navigate = this.navigate.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   navigate(course) {
@@ -15,8 +16,23 @@ class Show extends Component {
     });
   }
 
+  delete(_id, inscriptions, plans, remove) {
+    let coursesUsers = inscriptions.filter((element, index) => {
+      return element.course_id === _id;
+    });
+    let coursesModules = plans.filter((element, index) => {
+      return element.course_id === _id;
+    });
+    if (coursesUsers.length === 0 && coursesModules.length === 0) {
+      remove(_id);
+      alert("deleted successfully");
+    } else {
+      alert("course has relations");
+    }
+  }
+
   render() {
-    const { courses, remove } = this.props;
+    const { courses, inscriptions, plans, remove } = this.props;
     const rows = courses.map((course, i) => {
       let _id = course._id;
       return (
@@ -42,7 +58,10 @@ class Show extends Component {
             </button>
           </td>
           <td scope="col">
-            <button onClick={() => remove(_id)} className="ui basic button">
+            <button
+              onClick={this.delete.bind(this, _id, inscriptions, plans, remove)}
+              className="ui basic button"
+            >
               <i className="remove sign icon"></i>
               Delete
             </button>
