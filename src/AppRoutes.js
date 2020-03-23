@@ -12,8 +12,7 @@ import CoursesShow from "./components/courses/ShowContainer";
 import CoursesCreate from "./components/courses/CreateContainer";
 import ModulesShow from "./components/modules/ShowContainer";
 import ModulesCreate from "./components/modules/CreateContainer";
-import ScoresShow from "./components/scores/Show";
-import ScoresCreate from "./components/scores/Create";
+import ScoresCreate from "./components/scores/CreateContainer";
 import Counter from "./components/counter/Counter";
 import CounterRedux from "./components/counter-redux/CounterContainer";
 import ShowInsCourses from "./components/inscriptions/ShowInsCoursesContainer";
@@ -24,10 +23,16 @@ import ShowPlanCourses from "./components/plans/ShowPlanCoursesContainer";
 import ShowPlanContainer from "./components/plans/ShowPlanContainer";
 import CreatePlanCourses from "./components/plans/CreatePlanCoursesContainer";
 import CreatePlanContainer from "./components/plans/CreatePlanContainer";
+import ScoresCourses from "./components/scores/ScoresCoursesContainer";
+import ScoresModules from "./components/scores/ScoresModulesContainer";
+import ScoresUsers from "./components/scores/ScoresUsersContainer";
 
 const AppRoutes = () => (
   <App>
     <Switch>
+      <Route exact path="/scores-users" component={ScoresUsers} />
+      <Route exact path="/scores-modules" component={ScoresModules} />
+      <Route exact path="/scores-courses" component={ScoresCourses} />
       <Route exact path="/plans-createn" component={CreatePlanCourses} />
       <Route exact path="/plans-create" component={CreatePlanContainer} />
       <Route exact path="/plans-shown" component={ShowPlanCourses} />
@@ -37,7 +42,6 @@ const AppRoutes = () => (
       <Route exact path="/inscriptions-shown" component={ShowInsCourses} />
       <Route exact path="/inscriptions-show" component={ShowInsContainer} />
       <Route exact path="/scores-create" component={ScoresCreate} />
-      <Route exact path="/scores-show" component={ScoresShow} />
       <Route exact path="/modules-create" component={ModulesCreate} />
       <Route exact path="/modules-show" component={ModulesShow} />
       <Route exact path="/courses-create" component={CoursesCreate} />

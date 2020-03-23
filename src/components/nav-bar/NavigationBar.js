@@ -61,10 +61,10 @@ class NavigationBar extends Component {
   }
 
   navigateScoresShow() {
-    this.props.history.push("/scores-show");
+    this.props.history.push("/scores-courses");
   }
   navigateScoresCreate() {
-    this.props.history.push("/scores-create");
+    this.props.history.push("/scores-courses");
   }
   navigateCounter() {
     this.props.history.push("/counter");

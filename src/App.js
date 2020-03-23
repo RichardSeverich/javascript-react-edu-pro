@@ -15,6 +15,7 @@ import reducerCourse from "./redux/reducers/ReducerCourse";
 import reducerModule from "./redux/reducers/ReducerModule";
 import reducerCourseUser from "./redux/reducers/ReducerCourseUser";
 import reducerCourseModule from "./redux/reducers/ReducerCourseModule";
+import reducerScore from "./redux/reducers/ReducerScore";
 
 // Mock data
 import { users } from "./mock-data/users.json";
@@ -22,6 +23,7 @@ import { courses } from "./mock-data/courses.json";
 import { modules } from "./mock-data/modules.json";
 import { coursesUsers } from "./mock-data/courses-users.json";
 import { coursesModules } from "./mock-data/courses-modules.json";
+import { scores } from "./mock-data/scores.json";
 
 let rootReducer = combineReducers({
   users: reducerUser,
@@ -29,6 +31,7 @@ let rootReducer = combineReducers({
   modules: reducerModule,
   coursesUsers: reducerCourseUser,
   coursesModules: reducerCourseModule,
+  scores: reducerScore,
   counter: reducerCounter
 });
 
@@ -38,6 +41,7 @@ const initialState = {
   modules: modules,
   coursesUsers: coursesUsers,
   coursesModules: coursesModules,
+  scores: scores,
   counter: 0
 };
 
